@@ -39,8 +39,6 @@
             this.grillaListaProductos = new System.Windows.Forms.DataGridView();
             this.labelListaProductos = new System.Windows.Forms.Label();
             this.panelLateralDetalleProducto = new System.Windows.Forms.Panel();
-            this.labelMostrarCodigo = new System.Windows.Forms.Label();
-            this.checkBoxMostrarCodigo = new System.Windows.Forms.CheckBox();
             this.btnGenerarCodigoBarras = new System.Windows.Forms.Button();
             this.panelSubMenu = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -60,6 +58,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.mostraretiqueta = new System.Windows.Forms.CheckBox();
+            this.Resultado = new System.Windows.Forms.Label();
             this.tabPrincipal.SuspendLayout();
             this.tabPageProductos.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -213,8 +213,8 @@
             // 
             this.panelLateralDetalleProducto.AutoScroll = true;
             this.panelLateralDetalleProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panelLateralDetalleProducto.Controls.Add(this.labelMostrarCodigo);
-            this.panelLateralDetalleProducto.Controls.Add(this.checkBoxMostrarCodigo);
+            this.panelLateralDetalleProducto.Controls.Add(this.Resultado);
+            this.panelLateralDetalleProducto.Controls.Add(this.mostraretiqueta);
             this.panelLateralDetalleProducto.Controls.Add(this.btnGenerarCodigoBarras);
             this.panelLateralDetalleProducto.Controls.Add(this.panelSubMenu);
             this.panelLateralDetalleProducto.Controls.Add(this.textBoxValorVenta);
@@ -235,25 +235,6 @@
             this.panelLateralDetalleProducto.Name = "panelLateralDetalleProducto";
             this.panelLateralDetalleProducto.Size = new System.Drawing.Size(239, 438);
             this.panelLateralDetalleProducto.TabIndex = 0;
-            // 
-            // labelMostrarCodigo
-            // 
-            this.labelMostrarCodigo.AutoSize = true;
-            this.labelMostrarCodigo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMostrarCodigo.Location = new System.Drawing.Point(52, 333);
-            this.labelMostrarCodigo.Name = "labelMostrarCodigo";
-            this.labelMostrarCodigo.Size = new System.Drawing.Size(146, 14);
-            this.labelMostrarCodigo.TabIndex = 13;
-            this.labelMostrarCodigo.Text = "Mostrar codigo en la etiqueta";
-            // 
-            // checkBoxMostrarCodigo
-            // 
-            this.checkBoxMostrarCodigo.AutoSize = true;
-            this.checkBoxMostrarCodigo.Location = new System.Drawing.Point(31, 333);
-            this.checkBoxMostrarCodigo.Name = "checkBoxMostrarCodigo";
-            this.checkBoxMostrarCodigo.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxMostrarCodigo.TabIndex = 12;
-            this.checkBoxMostrarCodigo.UseVisualStyleBackColor = true;
             // 
             // btnGenerarCodigoBarras
             // 
@@ -480,6 +461,30 @@
             this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
             this.pictureBox5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseMove);
             // 
+            // mostraretiqueta
+            // 
+            this.mostraretiqueta.AutoSize = true;
+            this.mostraretiqueta.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.mostraretiqueta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mostraretiqueta.Location = new System.Drawing.Point(33, 333);
+            this.mostraretiqueta.Name = "mostraretiqueta";
+            this.mostraretiqueta.Size = new System.Drawing.Size(154, 17);
+            this.mostraretiqueta.TabIndex = 133;
+            this.mostraretiqueta.Text = "Mostrar Codigo en Etiqueta";
+            this.mostraretiqueta.UseVisualStyleBackColor = false;
+            // 
+            // Resultado
+            // 
+            this.Resultado.AutoSize = true;
+            this.Resultado.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Resultado.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Resultado.Location = new System.Drawing.Point(9, 271);
+            this.Resultado.Name = "Resultado";
+            this.Resultado.Size = new System.Drawing.Size(64, 13);
+            this.Resultado.TabIndex = 134;
+            this.Resultado.Text = "Resultado";
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,8 +536,6 @@
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.TextBox textBoxCodigo;
         private System.Windows.Forms.Label labelCodigo;
-        private System.Windows.Forms.Label labelMostrarCodigo;
-        private System.Windows.Forms.CheckBox checkBoxMostrarCodigo;
         private System.Windows.Forms.Button btnGenerarCodigoBarras;
         private System.Windows.Forms.Panel panelSubMenu;
         private System.Windows.Forms.Button btnEliminar;
@@ -547,5 +550,7 @@
         private System.Windows.Forms.Label labelListaProductos;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.CheckBox mostraretiqueta;
+        private System.Windows.Forms.Label Resultado;
     }
 }
