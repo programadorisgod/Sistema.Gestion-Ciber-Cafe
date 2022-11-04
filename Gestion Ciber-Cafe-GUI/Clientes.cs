@@ -349,5 +349,15 @@ namespace Gestion_Ciber_Cafe_GUI
         {
 
         }
+
+        private void btnListaClientes_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
     }
 }

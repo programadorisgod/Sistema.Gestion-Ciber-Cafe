@@ -39,6 +39,7 @@
             this.panelInferior = new System.Windows.Forms.Panel();
             this.pictureBoxInferior = new System.Windows.Forms.PictureBox();
             this.panelBotones = new System.Windows.Forms.Panel();
+            this.btnListaClientes = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -61,6 +62,7 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnimprimir = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -165,9 +167,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInferior.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelInferior.Controls.Add(this.pictureBoxInferior);
-            this.panelInferior.Location = new System.Drawing.Point(0, 268);
+            this.panelInferior.Location = new System.Drawing.Point(0, 300);
             this.panelInferior.Name = "panelInferior";
-            this.panelInferior.Size = new System.Drawing.Size(266, 169);
+            this.panelInferior.Size = new System.Drawing.Size(266, 137);
             this.panelInferior.TabIndex = 1;
             // 
             // pictureBoxInferior
@@ -187,13 +189,33 @@
             this.panelBotones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBotones.Controls.Add(this.btnListaClientes);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnModificar);
             this.panelBotones.Controls.Add(this.btnGuardar);
-            this.panelBotones.Location = new System.Drawing.Point(0, 142);
+            this.panelBotones.Location = new System.Drawing.Point(0, 130);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(266, 158);
+            this.panelBotones.Size = new System.Drawing.Size(266, 170);
             this.panelBotones.TabIndex = 2;
+            // 
+            // btnListaClientes
+            // 
+            this.btnListaClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListaClientes.FlatAppearance.BorderSize = 0;
+            this.btnListaClientes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnListaClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaClientes.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.arrow_right_12777;
+            this.btnListaClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnListaClientes.Location = new System.Drawing.Point(0, 128);
+            this.btnListaClientes.Name = "btnListaClientes";
+            this.btnListaClientes.Padding = new System.Windows.Forms.Padding(60, 0, 50, 0);
+            this.btnListaClientes.Size = new System.Drawing.Size(266, 43);
+            this.btnListaClientes.TabIndex = 27;
+            this.btnListaClientes.Text = "Lista de Clientes";
+            this.btnListaClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaClientes.UseVisualStyleBackColor = true;
+            this.btnListaClientes.Click += new System.EventHandler(this.btnListaClientes_Click);
             // 
             // btnEliminar
             // 
@@ -260,7 +282,7 @@
             this.panelSuperior.Controls.Add(this.pictureBoxSuperior);
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(270, 142);
+            this.panelSuperior.Size = new System.Drawing.Size(270, 130);
             this.panelSuperior.TabIndex = 0;
             // 
             // pictureBoxSuperior
@@ -271,7 +293,7 @@
             this.pictureBoxSuperior.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.superior;
             this.pictureBoxSuperior.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxSuperior.Name = "pictureBoxSuperior";
-            this.pictureBoxSuperior.Size = new System.Drawing.Size(266, 142);
+            this.pictureBoxSuperior.Size = new System.Drawing.Size(266, 130);
             this.pictureBoxSuperior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSuperior.TabIndex = 0;
             this.pictureBoxSuperior.TabStop = false;
@@ -450,6 +472,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tabPage2.Controls.Add(this.btnRegistrar);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.btnimprimir);
             this.tabPage2.Controls.Add(this.txtBuscar);
@@ -462,6 +485,24 @@
             this.tabPage2.Size = new System.Drawing.Size(953, 438);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lista Clientes";
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.arrow_left_12777;
+            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrar.Location = new System.Drawing.Point(809, 6);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 1);
+            this.btnRegistrar.Size = new System.Drawing.Size(127, 33);
+            this.btnRegistrar.TabIndex = 7;
+            this.btnRegistrar.Text = "       Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // pictureBox1
             // 
@@ -482,10 +523,12 @@
             // 
             this.btnimprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnimprimir.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnimprimir.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnimprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnimprimir.Location = new System.Drawing.Point(809, 6);
+            this.btnimprimir.Location = new System.Drawing.Point(676, 6);
             this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.btnimprimir.Size = new System.Drawing.Size(127, 33);
             this.btnimprimir.TabIndex = 5;
             this.btnimprimir.Text = "Descargar pdf";
@@ -559,7 +602,7 @@
             // 
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.printer_print_22133__1_;
-            this.pictureBox8.Location = new System.Drawing.Point(768, 6);
+            this.pictureBox8.Location = new System.Drawing.Point(635, 6);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(35, 33);
             this.pictureBox8.TabIndex = 4;
@@ -679,5 +722,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label labelDetalleCliente;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnListaClientes;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }
