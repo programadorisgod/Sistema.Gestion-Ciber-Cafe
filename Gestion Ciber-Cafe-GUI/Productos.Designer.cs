@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPageProductos = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,6 +39,7 @@
             this.grillaListaProductos = new System.Windows.Forms.DataGridView();
             this.labelListaProductos = new System.Windows.Forms.Label();
             this.panelLateralDetalleProducto = new System.Windows.Forms.Panel();
+            this.labelError = new System.Windows.Forms.Label();
             this.mostraretiqueta = new System.Windows.Forms.CheckBox();
             this.btnGenerarCodigoBarras = new System.Windows.Forms.Button();
             this.panelSubMenu = new System.Windows.Forms.Panel();
@@ -59,7 +60,6 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.labelError = new System.Windows.Forms.Label();
             this.tabPrincipal.SuspendLayout();
             this.tabPageProductos.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -168,27 +168,27 @@
             this.grillaListaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grillaListaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grillaListaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaListaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaListaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grillaListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaListaProductos.Location = new System.Drawing.Point(11, 54);
             this.grillaListaProductos.MultiSelect = false;
             this.grillaListaProductos.Name = "grillaListaProductos";
             this.grillaListaProductos.ReadOnly = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaListaProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaListaProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grillaListaProductos.RowHeadersVisible = false;
             this.grillaListaProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grillaListaProductos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -235,6 +235,20 @@
             this.panelLateralDetalleProducto.Name = "panelLateralDetalleProducto";
             this.panelLateralDetalleProducto.Size = new System.Drawing.Size(239, 438);
             this.panelLateralDetalleProducto.TabIndex = 0;
+            // 
+            // labelError
+            // 
+            this.labelError.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelError.AutoSize = true;
+            this.labelError.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.labelError.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.importante__1_;
+            this.labelError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelError.Location = new System.Drawing.Point(40, 271);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(72, 13);
+            this.labelError.TabIndex = 135;
+            this.labelError.Text = "ErrorMessage";
+            this.labelError.Visible = false;
             // 
             // mostraretiqueta
             // 
@@ -472,20 +486,6 @@
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
             this.pictureBox5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseMove);
-            // 
-            // labelError
-            // 
-            this.labelError.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelError.AutoSize = true;
-            this.labelError.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.labelError.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.importante__1_;
-            this.labelError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelError.Location = new System.Drawing.Point(40, 271);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(72, 13);
-            this.labelError.TabIndex = 135;
-            this.labelError.Text = "ErrorMessage";
-            this.labelError.Visible = false;
             // 
             // Productos
             // 

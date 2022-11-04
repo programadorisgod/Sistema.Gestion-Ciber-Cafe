@@ -131,58 +131,40 @@ namespace Gestion_Ciber_Cafe_GUI
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=-AgrqLgXUGo");
         }
 
-        private void btnProveedores_Click_1(object sender, EventArgs e)
-        {
-            //Codigo...
-            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
-            OcultarSubmenu();
-        }
-
-        private void btnInventario_Click_1(object sender, EventArgs e)
-        {
-            //Codigo...
-            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
-            OcultarSubmenu();
-        }
-
-        private void linkLabelPrincipal_LinkClicked_2(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void linkLabelPrincipal_MouseMove_1(object sender, MouseEventArgs e)
-        {
-            linkLabelPrincipal.LinkColor = Color.Cyan;
-        }
-
-        private void linkLabelPrincipal_MouseLeave_1(object sender, EventArgs e)
-        {
-            linkLabelPrincipal.LinkColor = Color.DeepSkyBlue;
-        }
-
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-
+            //Codigo...
+            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
+            OcultarSubmenu();
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-
+            //Codigo...
+            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
+            OcultarSubmenu();
         }
 
         private void linkLabelPrincipal_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            try
+            {
+                VisitLink();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se puede abrir el enlace en el que se hizo clic.");
+            }
         }
 
         private void linkLabelPrincipal_MouseLeave(object sender, EventArgs e)
         {
-
+            linkLabelPrincipal.LinkColor = Color.DeepSkyBlue;
         }
 
         private void linkLabelPrincipal_MouseMove(object sender, MouseEventArgs e)
         {
-
+            linkLabelPrincipal.LinkColor = Color.Cyan;
         }
     }
 }

@@ -86,6 +86,7 @@ namespace Gestion_Ciber_Cafe_GUI
                     Limpiar();
                     row = -1;
                 }
+                mostraretiqueta.Checked = false;
             }
         }
         void Eliminar()
@@ -101,6 +102,7 @@ namespace Gestion_Ciber_Cafe_GUI
                 }
                 Limpiar();
                 row = -1;
+                mostraretiqueta.Checked = false;
             }
         }
         private void pictureBox5_Click(object sender, EventArgs e)
