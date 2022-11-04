@@ -93,6 +93,16 @@ namespace Gestion_Ciber_Cafe_GUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_clientes {
+            get {
+                object obj = ResourceManager.GetObject("fondo clientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_delete_128_28267 {
             get {
                 object obj = ResourceManager.GetObject("ic_delete_128_28267", resourceCulture);
@@ -176,6 +186,26 @@ namespace Gestion_Ciber_Cafe_GUI.Properties {
         internal static System.Drawing.Bitmap inferior {
             get {
                 object obj = ResourceManager.GetObject("inferior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap isometric_online_shopping_concept_23_2147865312_edit {
+            get {
+                object obj = ResourceManager.GetObject("isometric-online-shopping-concept_23-2147865312-edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap isometric_online_shopping_concept_23_2147865312_edit1 {
+            get {
+                object obj = ResourceManager.GetObject("isometric-online-shopping-concept_23-2147865312-edit1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

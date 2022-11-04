@@ -135,6 +135,7 @@
             // 
             // labelDetalleCliente
             // 
+            this.labelDetalleCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelDetalleCliente.AutoSize = true;
             this.labelDetalleCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDetalleCliente.ForeColor = System.Drawing.Color.Indigo;
@@ -351,11 +352,11 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox4.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.new_add_user_16734;
-            this.pictureBox4.Location = new System.Drawing.Point(30, 75);
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox4.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.fondo_clientes;
+            this.pictureBox4.Location = new System.Drawing.Point(26, 95);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(279, 283);
+            this.pictureBox4.Size = new System.Drawing.Size(322, 254);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;

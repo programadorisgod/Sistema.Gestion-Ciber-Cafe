@@ -271,5 +271,14 @@
   <ItemGroup>
     <None Include="Resources\pag.html" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\isometric-online-shopping-concept_23-2147865312-edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\isometric-online-shopping-concept_23-2147865312-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo clientes.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
