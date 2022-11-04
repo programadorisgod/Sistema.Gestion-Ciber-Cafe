@@ -265,34 +265,40 @@ namespace Gestion_Ciber_Cafe_GUI
         {
             if (textBoxCodigo.Text.Trim() == "")
             {
-                Resultado.Text = "Por favor, ingrese el codigo";
-                Resultado.ForeColor = Color.Red;
+                msgError("Por favor, ingrese el codigo");
             }
-            try
+            else
             {
-                TYPE TipoCodigo = TYPE.CODE128;
-                BarcodeLib.Barcode code = new BarcodeLib.Barcode();
-                code.IncludeLabel = mostraretiqueta.Checked;
-                var imagen = code.Encode(TipoCodigo, textBoxCodigo.Text.Trim(), Color.Black, Color.White, 400, 100);
-
-                Byte[] barcode = ImageToByte2(imagen);
-
-                SaveFileDialog save = new SaveFileDialog();
-                save.FileName = string.Format("{0}.png", textBoxCodigo.Text.Trim());
-                save.Filter = "Imagen|*.png";
-                if (save.ShowDialog()== DialogResult.OK)
+                try
                 {
-                    File.WriteAllBytes(save.FileName, barcode);
-                    MessageBox.Show("Codigo generado exitosamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TYPE TipoCodigo = TYPE.CODE128;
+                    BarcodeLib.Barcode code = new BarcodeLib.Barcode();
+                    code.IncludeLabel = mostraretiqueta.Checked;
+                    var imagen = code.Encode(TipoCodigo, textBoxCodigo.Text.Trim(), Color.Black, Color.White, 400, 100);
 
+                    Byte[] barcode = ImageToByte2(imagen);
+
+                    SaveFileDialog save = new SaveFileDialog();
+                    save.FileName = string.Format("{0}.png", textBoxCodigo.Text.Trim());
+                    save.Filter = "Imagen|*.png";
+                    if (save.ShowDialog() == DialogResult.OK)
+                    {
+                        File.WriteAllBytes(save.FileName, barcode);
+                        MessageBox.Show("Codigo generado exitosamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
                 }
+                catch (Exception ep)
+                {
+                    MessageBox.Show(string.Format("Lo sentimos, no se pudo generar el codigo :(. \nMayor informacion:\n{0}, ", ep.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information));
+                }
+                labelError.Visible = false;
             }
-            catch (Exception ep)
-            {
-                MessageBox.Show(string.Format("Lo sentimos, no se pudo generar el codigo :(. \nMayor informacion:\n{0}, ", ep.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information));
-            }
-           
-
+        }
+        private void msgError(string msg)
+        {
+            labelError.Text = "    " + msg;
+            labelError.Visible = true;
         }
         public static byte[] ImageToByte2(Image image)
         {

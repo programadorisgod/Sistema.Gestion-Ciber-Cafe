@@ -188,5 +188,10 @@ namespace Gestion_Ciber_Cafe_GUI
         {
             pictureBox4.BackColor = Color.Transparent;
         }
+
+        private void labelError_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

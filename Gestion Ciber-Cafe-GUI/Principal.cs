@@ -87,19 +87,21 @@ namespace Gestion_Ciber_Cafe_GUI
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             //Codigo...
-            MessageBox.Show("Esta usando la version beta de este proyecto. \n\nClick en 'Saber mas'");
+            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
             OcultarSubmenu();
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
             //Codigo...
+            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
             OcultarSubmenu();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //Codigo...
+            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
             OcultarSubmenu();
         }
 
@@ -118,7 +120,6 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            //Codigo...
             Clientes  clientes = new Clientes();
             clientes.Show();
             OcultarSubmenu();
@@ -133,12 +134,14 @@ namespace Gestion_Ciber_Cafe_GUI
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             //Codigo...
+            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
             OcultarSubmenu();
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
             //Codigo...
+            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
             OcultarSubmenu();
         }
 

@@ -90,7 +90,7 @@
             this.labelMarca.AutoSize = true;
             this.labelMarca.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelMarca.Location = new System.Drawing.Point(61, 38);
+            this.labelMarca.Location = new System.Drawing.Point(53, 36);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(129, 14);
             this.labelMarca.TabIndex = 11;
@@ -101,12 +101,12 @@
             this.linkLabelPrincipal.ActiveLinkColor = System.Drawing.SystemColors.ControlDark;
             this.linkLabelPrincipal.AutoSize = true;
             this.linkLabelPrincipal.LinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.linkLabelPrincipal.Location = new System.Drawing.Point(88, 57);
+            this.linkLabelPrincipal.Location = new System.Drawing.Point(72, 55);
             this.linkLabelPrincipal.Name = "linkLabelPrincipal";
-            this.linkLabelPrincipal.Size = new System.Drawing.Size(63, 13);
+            this.linkLabelPrincipal.Size = new System.Drawing.Size(85, 13);
             this.linkLabelPrincipal.TabIndex = 10;
             this.linkLabelPrincipal.TabStop = true;
-            this.linkLabelPrincipal.Text = "Saber mas?";
+            this.linkLabelPrincipal.Text = "Quienes somos?";
             this.linkLabelPrincipal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelPrincipal_LinkClicked_1);
             this.linkLabelPrincipal.MouseLeave += new System.EventHandler(this.linkLabelPrincipal_MouseLeave);
             this.linkLabelPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.linkLabelPrincipal_MouseMove);
