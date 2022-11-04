@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BarcodeLib;
 
 namespace Gestion_Ciber_Cafe_GUI
 {
@@ -261,7 +263,44 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void btnGenerarCodigoBarras_Click(object sender, EventArgs e)
         {
+            if (textBoxCodigo.Text.Trim() == "")
+            {
+                Resultado.Text = "Por favor, ingrese el codigo";
+                Resultado.ForeColor = Color.Red;
+            }
+            try
+            {
+                TYPE TipoCodigo = TYPE.CODE128;
+                BarcodeLib.Barcode code = new BarcodeLib.Barcode();
+                code.IncludeLabel = mostraretiqueta.Checked;
+                var imagen = code.Encode(TipoCodigo, textBoxCodigo.Text.Trim(), Color.Black, Color.White, 400, 100);
 
+                Byte[] barcode = ImageToByte2(imagen);
+
+                SaveFileDialog save = new SaveFileDialog();
+                save.FileName = string.Format("{0}.png", textBoxCodigo.Text.Trim());
+                save.Filter = "Imagen|*.png";
+                if (save.ShowDialog()== DialogResult.OK)
+                {
+                    File.WriteAllBytes(save.FileName, barcode);
+                    MessageBox.Show("Codigo generado exitosamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception ep)
+            {
+                MessageBox.Show(string.Format("Lo sentimos, no se pudo generar el codigo :(. \nMayor informacion:\n{0}, ", ep.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information));
+            }
+           
+
+        }
+        public static byte[] ImageToByte2(Image image)
+        {
+            using (var sr = new MemoryStream())
+            {
+                image.Save(sr, System.Drawing.Imaging.ImageFormat.Png);
+                return sr.ToArray();
+            }
         }
     }
 }
