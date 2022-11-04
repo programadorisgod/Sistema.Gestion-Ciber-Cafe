@@ -72,12 +72,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CargarProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CargarProducto.Designer.cs">
-      <DependentUpon>CargarProducto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,9 +98,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CargarProducto.resx">
-      <DependentUpon>CargarProducto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>

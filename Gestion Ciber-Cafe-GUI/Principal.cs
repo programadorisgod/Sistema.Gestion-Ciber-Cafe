@@ -162,5 +162,17 @@ namespace Gestion_Ciber_Cafe_GUI
         {
             linkLabelPrincipal.LinkColor = Color.DeepSkyBlue;
         }
+
+        private void linkLabelPrincipal_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                VisitLink();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se puede abrir el enlace en el que se hizo clic.");
+            }
+        }
     }
 }

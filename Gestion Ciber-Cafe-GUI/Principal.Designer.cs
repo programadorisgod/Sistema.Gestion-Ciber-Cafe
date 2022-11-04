@@ -107,6 +107,7 @@
             this.linkLabelPrincipal.TabIndex = 10;
             this.linkLabelPrincipal.TabStop = true;
             this.linkLabelPrincipal.Text = "Saber mas?";
+            this.linkLabelPrincipal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelPrincipal_LinkClicked_1);
             this.linkLabelPrincipal.MouseLeave += new System.EventHandler(this.linkLabelPrincipal_MouseLeave);
             this.linkLabelPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.linkLabelPrincipal_MouseMove);
             // 
