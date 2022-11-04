@@ -62,15 +62,14 @@ namespace Logica
             Producto productoviejo = GetByCode(productonuevo, row);
             try
             {
-                if (productoviejo != null)
-                {
-                    return "Ya existe un producto con este codigo";
-                }
-                else
+                if (productoviejo == null)
                 {
                     ListaProductos[row] = productonuevo;
                     return repositorioProducto.Actualizar(ListaProductos, false);
-
+                }
+                else
+                {
+                    return "Ya existe un producto con este codigo";
                 }
             }
             catch (Exception)
@@ -82,24 +81,12 @@ namespace Logica
         public Producto GetByCode(Producto producto, int row)
         {
             ListaProductos = GetAll();
-            if (row == -1)
+
+            for (int i = 0; i < ListaProductos.Count; i++)
             {
-                foreach (Producto item in ListaProductos)
+                if (ListaProductos[i].Codigo == producto.Codigo && i != row)
                 {
-                    if (item.Codigo == producto.Codigo)
-                    {
-                        return item;
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 0; i < ListaProductos.Count; i++)
-                {
-                    if (ListaProductos[i].Codigo == producto.Codigo && i != row)
-                    {
-                        return ListaProductos[i];
-                    }
+                    return ListaProductos[i];
                 }
             }
 
