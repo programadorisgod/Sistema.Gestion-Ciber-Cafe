@@ -20,7 +20,7 @@ namespace Gestion_Ciber_Cafe_GUI
     public partial class Clientes : Form
 
     {
-        int p = 0;
+        int p = -1;
         Entidades.Cliente cliente = new Entidades.Cliente();
         Logica.ServicioCliente servicioCliente = new Logica.ServicioCliente();
         public Clientes()
@@ -41,24 +41,39 @@ namespace Gestion_Ciber_Cafe_GUI
         }
         void Guardar()
         {
-            cliente.Cedula = int.Parse(txtcedula.Text);
-            cliente.Nombre = txtnombre.Text;
-            cliente.Telefono = txtTelefono.Text;
-            cliente.Direccion = txtDireccion.Text;
-            cliente.Correo = txtCorreo.Text;
-            if (txtcedula.Text == " " || txtnombre.Text == " " || txtTelefono.Text == " " || txtDireccion.Text == " " || txtCorreo.Text == " ")
+            if (txtcedula.Text == "" || txtnombre.Text == "" || txtTelefono.Text == " " || txtDireccion.Text == " " || txtCorreo.Text == " ")
             {
                 MessageBox.Show("Llene todos los campos, por favor");
             }
             else
             {
-                var Respuesta = MessageBox.Show("Desea guardar el cliente?", "Responde...", MessageBoxButtons.YesNoCancel);
-                if (Respuesta == DialogResult.Yes)
+                if (p== -1)
                 {
-                    var mensaje = servicioCliente.Guardar(cliente);
-                    MessageBox.Show(mensaje);
-                    Refres();
+                    cliente.Cedula = int.Parse(txtcedula.Text);
+                    cliente.Nombre = txtnombre.Text;
+                    cliente.Telefono = txtTelefono.Text;
+                    cliente.Direccion = txtDireccion.Text;
+                    cliente.Correo = txtCorreo.Text;
+                    var Respuesta = MessageBox.Show("Desea guardar el cliente?", "Responde...", MessageBoxButtons.YesNoCancel);
+                    if (Respuesta == DialogResult.Yes)
+                    {
+                        var mensaje = servicioCliente.Guardar(cliente);
+                        MessageBox.Show(mensaje);
+                        Refres();
+                    }
                 }
+                else
+                {
+                    var Respuesta = MessageBox.Show("Desea modifcar el cliente?", "Responde...", MessageBoxButtons.YesNoCancel);
+                    if (Respuesta == DialogResult.Yes)
+                    {
+                        Editar();
+                    }
+                    Limpiar();
+                    p = -1;
+                }
+
+
             }
 
         }
@@ -194,7 +209,7 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 txtCorreo.Focus();
@@ -228,7 +243,7 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-             
+
         }
 
         private void btnimprimir_Click(object sender, EventArgs e)
@@ -316,21 +331,30 @@ namespace Gestion_Ciber_Cafe_GUI
         {
             Guardar();
             Limpiar();
+            Refres();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Editar();
         }
-
+        void Eliminar()
+        {
+            if (p != -1) 
+            {
+                var Respuesta = MessageBox.Show("Desea borrar el cliente seleccionado?", "Responde...", MessageBoxButtons.YesNo);
+                if (Respuesta == DialogResult.OK)
+                {
+                    var mensaje = servicioCliente.Delete(p);
+                    MessageBox.Show(mensaje);
+                    Refres();
+                }
+               
+            }
+        }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (p != 1)
-            {
-                var mensaje = servicioCliente.Delete(p);
-                MessageBox.Show(mensaje);
-                Refres();
-            }
+            Eliminar();
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)

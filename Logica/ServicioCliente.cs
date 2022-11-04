@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Entidades;
 using Datos;
+using NPOI.SS.Formula.Functions;
 
 namespace Logica
 {
@@ -35,24 +36,19 @@ namespace Logica
         }
 
 
-        public string Edit(Cliente Cliente_new)
+        public string Edit(Cliente Cliente_new, int p)
         {
-            Cliente cliente_actual = GetByAll(Cliente_new);
+            Cliente cliente_actual = GetById(Cliente_new, p);
             try
             {
                 if (cliente_actual == null)
                 {
-                    return "Contacto no existe";
+                    clienteList[p] = Cliente_new;
+                    return repositorioCliente.Actualizar(clienteList, false);
                 }
                 else
                 {
-                    cliente_actual.Cedula = Cliente_new.Cedula;
-                    cliente_actual.Nombre = Cliente_new.Nombre;
-                    cliente_actual.Telefono = Cliente_new.Telefono;
-                    cliente_actual.Direccion = Cliente_new.Direccion;
-                    cliente_actual.Correo = Cliente_new.Correo;
-                    return repositorioCliente.Actualizar(clienteList, false);
-
+                    return "Ya existe un cliente con esta cedula";
                 }
             }
             catch (Exception)
@@ -85,7 +81,7 @@ namespace Logica
             string Guardado = string.Empty;
             try
             {
-                if (GetByAll(Cliente) == null)
+                if (GetById(Cliente, -1) == null)
                 {
                     Guardado = repositorioCliente.Guardar(Cliente);
                     return Guardado;
@@ -104,14 +100,14 @@ namespace Logica
         }
        
 
-        public Cliente GetByAll(Cliente cliente)
+        public Cliente GetById(Cliente cliente, int p)
         {
-            foreach (Cliente item in clienteList)
+            clienteList = GetAll();
+            for (int i = 0; i < clienteList.Count; i++)
             {
-                if (item.Cedula == cliente.Cedula || item.Nombre == cliente.Nombre 
-                    || item.Telefono == cliente.Telefono || item.Correo == cliente.Correo)
+                if (clienteList[i].Cedula == cliente.Cedula && i != p)
                 {
-                    return item;
+                    return clienteList[i];
                 }
             }
             return null;
