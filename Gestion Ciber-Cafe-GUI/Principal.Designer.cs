@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panelMenuLateral = new System.Windows.Forms.Panel();
+            this.panelInfo = new System.Windows.Forms.Panel();
+            this.labelMarca = new System.Windows.Forms.Label();
+            this.linkLabelPrincipal = new System.Windows.Forms.LinkLabel();
+            this.btnInventario = new System.Windows.Forms.Button();
+            this.btnProveedores = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
-            this.panelSubmenuProductos = new System.Windows.Forms.Panel();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.btnNuevoProducto = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.panelSubMenuEntradas = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -46,19 +48,13 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnProveedores = new System.Windows.Forms.Button();
-            this.btnInventario = new System.Windows.Forms.Button();
-            this.panelInfo = new System.Windows.Forms.Panel();
-            this.labelMarca = new System.Windows.Forms.Label();
-            this.linkLabelPrincipal = new System.Windows.Forms.LinkLabel();
             this.panelMenuLateral.SuspendLayout();
-            this.panelSubmenuProductos.SuspendLayout();
+            this.panelInfo.SuspendLayout();
             this.panelSubMenuEntradas.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panelInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenuLateral
@@ -69,7 +65,6 @@
             this.panelMenuLateral.Controls.Add(this.btnInventario);
             this.panelMenuLateral.Controls.Add(this.btnProveedores);
             this.panelMenuLateral.Controls.Add(this.btnClientes);
-            this.panelMenuLateral.Controls.Add(this.panelSubmenuProductos);
             this.panelMenuLateral.Controls.Add(this.btnProductos);
             this.panelMenuLateral.Controls.Add(this.panelSubMenuEntradas);
             this.panelMenuLateral.Controls.Add(this.btnEntradas);
@@ -80,6 +75,77 @@
             this.panelMenuLateral.Size = new System.Drawing.Size(250, 500);
             this.panelMenuLateral.TabIndex = 11;
             // 
+            // panelInfo
+            // 
+            this.panelInfo.Controls.Add(this.labelMarca);
+            this.panelInfo.Controls.Add(this.linkLabelPrincipal);
+            this.panelInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelInfo.Location = new System.Drawing.Point(0, 446);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(233, 100);
+            this.panelInfo.TabIndex = 8;
+            // 
+            // labelMarca
+            // 
+            this.labelMarca.AutoSize = true;
+            this.labelMarca.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelMarca.Location = new System.Drawing.Point(61, 38);
+            this.labelMarca.Name = "labelMarca";
+            this.labelMarca.Size = new System.Drawing.Size(129, 14);
+            this.labelMarca.TabIndex = 11;
+            this.labelMarca.Text = "© Tapias-Bermudez 2022";
+            // 
+            // linkLabelPrincipal
+            // 
+            this.linkLabelPrincipal.ActiveLinkColor = System.Drawing.SystemColors.ControlDark;
+            this.linkLabelPrincipal.AutoSize = true;
+            this.linkLabelPrincipal.LinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.linkLabelPrincipal.Location = new System.Drawing.Point(88, 57);
+            this.linkLabelPrincipal.Name = "linkLabelPrincipal";
+            this.linkLabelPrincipal.Size = new System.Drawing.Size(63, 13);
+            this.linkLabelPrincipal.TabIndex = 10;
+            this.linkLabelPrincipal.TabStop = true;
+            this.linkLabelPrincipal.Text = "Saber mas?";
+            this.linkLabelPrincipal.MouseLeave += new System.EventHandler(this.linkLabelPrincipal_MouseLeave);
+            this.linkLabelPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.linkLabelPrincipal_MouseMove);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnInventario.Location = new System.Drawing.Point(0, 401);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnInventario.Size = new System.Drawing.Size(233, 45);
+            this.btnInventario.TabIndex = 7;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
+            // 
+            // btnProveedores
+            // 
+            this.btnProveedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProveedores.FlatAppearance.BorderSize = 0;
+            this.btnProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProveedores.Location = new System.Drawing.Point(0, 356);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnProveedores.Size = new System.Drawing.Size(233, 45);
+            this.btnProveedores.TabIndex = 6;
+            this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.UseVisualStyleBackColor = true;
+            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
+            // 
             // btnClientes
             // 
             this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
@@ -88,7 +154,7 @@
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnClientes.Location = new System.Drawing.Point(0, 391);
+            this.btnClientes.Location = new System.Drawing.Point(0, 311);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnClientes.Size = new System.Drawing.Size(233, 45);
@@ -97,53 +163,6 @@
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
-            // panelSubmenuProductos
-            // 
-            this.panelSubmenuProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panelSubmenuProductos.Controls.Add(this.btnCargar);
-            this.panelSubmenuProductos.Controls.Add(this.btnNuevoProducto);
-            this.panelSubmenuProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenuProductos.Location = new System.Drawing.Point(0, 311);
-            this.panelSubmenuProductos.Name = "panelSubmenuProductos";
-            this.panelSubmenuProductos.Size = new System.Drawing.Size(233, 80);
-            this.panelSubmenuProductos.TabIndex = 4;
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCargar.FlatAppearance.BorderSize = 0;
-            this.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnCargar.Location = new System.Drawing.Point(0, 40);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnCargar.Size = new System.Drawing.Size(233, 40);
-            this.btnCargar.TabIndex = 1;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // btnNuevoProducto
-            // 
-            this.btnNuevoProducto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNuevoProducto.FlatAppearance.BorderSize = 0;
-            this.btnNuevoProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoProducto.ForeColor = System.Drawing.Color.LightGray;
-            this.btnNuevoProducto.Location = new System.Drawing.Point(0, 0);
-            this.btnNuevoProducto.Name = "btnNuevoProducto";
-            this.btnNuevoProducto.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnNuevoProducto.Size = new System.Drawing.Size(233, 40);
-            this.btnNuevoProducto.TabIndex = 0;
-            this.btnNuevoProducto.Text = "Nuevo";
-            this.btnNuevoProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoProducto.UseVisualStyleBackColor = true;
-            this.btnNuevoProducto.Click += new System.EventHandler(this.btnNuevoProducto_Click);
             // 
             // btnProductos
             // 
@@ -328,77 +347,6 @@
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
             // 
-            // btnProveedores
-            // 
-            this.btnProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProveedores.FlatAppearance.BorderSize = 0;
-            this.btnProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedores.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnProveedores.Location = new System.Drawing.Point(0, 436);
-            this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnProveedores.Size = new System.Drawing.Size(233, 45);
-            this.btnProveedores.TabIndex = 6;
-            this.btnProveedores.Text = "Proveedores";
-            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.UseVisualStyleBackColor = true;
-            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInventario.FlatAppearance.BorderSize = 0;
-            this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnInventario.Location = new System.Drawing.Point(0, 481);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnInventario.Size = new System.Drawing.Size(233, 45);
-            this.btnInventario.TabIndex = 7;
-            this.btnInventario.Text = "Inventario";
-            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.UseVisualStyleBackColor = true;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            // 
-            // panelInfo
-            // 
-            this.panelInfo.Controls.Add(this.labelMarca);
-            this.panelInfo.Controls.Add(this.linkLabelPrincipal);
-            this.panelInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInfo.Location = new System.Drawing.Point(0, 526);
-            this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(233, 100);
-            this.panelInfo.TabIndex = 8;
-            // 
-            // labelMarca
-            // 
-            this.labelMarca.AutoSize = true;
-            this.labelMarca.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelMarca.Location = new System.Drawing.Point(61, 38);
-            this.labelMarca.Name = "labelMarca";
-            this.labelMarca.Size = new System.Drawing.Size(129, 14);
-            this.labelMarca.TabIndex = 11;
-            this.labelMarca.Text = "© Tapias-Bermudez 2022";
-            // 
-            // linkLabelPrincipal
-            // 
-            this.linkLabelPrincipal.ActiveLinkColor = System.Drawing.SystemColors.ControlDark;
-            this.linkLabelPrincipal.AutoSize = true;
-            this.linkLabelPrincipal.LinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.linkLabelPrincipal.Location = new System.Drawing.Point(88, 57);
-            this.linkLabelPrincipal.Name = "linkLabelPrincipal";
-            this.linkLabelPrincipal.Size = new System.Drawing.Size(63, 13);
-            this.linkLabelPrincipal.TabIndex = 10;
-            this.linkLabelPrincipal.TabStop = true;
-            this.linkLabelPrincipal.Text = "Saber mas?";
-            this.linkLabelPrincipal.MouseLeave += new System.EventHandler(this.linkLabelPrincipal_MouseLeave);
-            this.linkLabelPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.linkLabelPrincipal_MouseMove);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,15 +367,14 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Principal_MouseDown);
             this.panelMenuLateral.ResumeLayout(false);
-            this.panelSubmenuProductos.ResumeLayout(false);
+            this.panelInfo.ResumeLayout(false);
+            this.panelInfo.PerformLayout();
             this.panelSubMenuEntradas.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panelInfo.ResumeLayout(false);
-            this.panelInfo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -443,11 +390,8 @@
         private System.Windows.Forms.Button btnNuevoEntrada;
         private System.Windows.Forms.Button btnEntradas;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Panel panelSubmenuProductos;
-        private System.Windows.Forms.Button btnNuevoProducto;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelTitulo2;
         private System.Windows.Forms.Label labelTitulo1;

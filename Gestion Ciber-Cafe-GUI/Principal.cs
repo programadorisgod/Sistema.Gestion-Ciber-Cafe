@@ -29,17 +29,12 @@ namespace Gestion_Ciber_Cafe_GUI
         private void PersonalizarDiseño()
         {
             panelSubMenuEntradas.Visible = false;
-            panelSubmenuProductos.Visible = false;
         }
         private void OcultarSubmenu()
         {
             if (panelSubMenuEntradas.Visible == true)
             {
                 panelSubMenuEntradas.Visible = false;
-            }
-            if (panelSubmenuProductos.Visible == true)
-            {
-                panelSubmenuProductos.Visible = false;
             }
         }
         private void MostrarSubmenu(Panel submenu)
@@ -115,19 +110,8 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            MostrarSubmenu(panelSubmenuProductos);
-        }
-
-        private void btnNuevoProducto_Click(object sender, EventArgs e)
-        {
             Productos productos = new Productos();
             productos.Show();
-            OcultarSubmenu();
-        }
-
-        private void btnCargar_Click(object sender, EventArgs e)
-        {
-            //Codigo...
             OcultarSubmenu();
         }
 
