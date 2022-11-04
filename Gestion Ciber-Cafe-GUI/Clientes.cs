@@ -119,7 +119,7 @@ namespace Gestion_Ciber_Cafe_GUI
             cliente.Telefono = txtTelefono.Text;
             cliente.Direccion = txtDireccion.Text;
             cliente.Correo = txtCorreo.Text;
-            var mensaje = servicioCliente.Edit(cliente);
+            var mensaje = servicioCliente.Edit(cliente, p);
             MessageBox.Show(mensaje);
             Limpiar();
             txtcedula.Focus();
@@ -343,13 +343,15 @@ namespace Gestion_Ciber_Cafe_GUI
             if (p != -1) 
             {
                 var Respuesta = MessageBox.Show("Desea borrar el cliente seleccionado?", "Responde...", MessageBoxButtons.YesNo);
-                if (Respuesta == DialogResult.OK)
+                if (Respuesta == DialogResult.Yes)
                 {
                     var mensaje = servicioCliente.Delete(p);
                     MessageBox.Show(mensaje);
                     Refres();
                 }
-               
+                Limpiar();
+                p = -1;
+
             }
         }
         private void btnEliminar_Click(object sender, EventArgs e)
