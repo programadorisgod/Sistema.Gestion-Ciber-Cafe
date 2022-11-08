@@ -5,9 +5,6 @@ using System.Text;
 
 namespace Entidades
 {
-    public class Detallesalida
-    {
-    }
 
     public class DetalleSalida
     {
