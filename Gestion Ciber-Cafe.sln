@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "Presentacion\Presentacion.csproj", "{8881E850-4BE6-4B2C-8477-C1BC85655EF2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{95A62FB5-F98D-43B2-8AF1-F7FC2F362418}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{F8191562-17AB-435F-8E6A-02DB9736F572}"
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8881E850-4BE6-4B2C-8477-C1BC85655EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8881E850-4BE6-4B2C-8477-C1BC85655EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8881E850-4BE6-4B2C-8477-C1BC85655EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8881E850-4BE6-4B2C-8477-C1BC85655EF2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95A62FB5-F98D-43B2-8AF1-F7FC2F362418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95A62FB5-F98D-43B2-8AF1-F7FC2F362418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95A62FB5-F98D-43B2-8AF1-F7FC2F362418}.Release|Any CPU.ActiveCfg = Release|Any CPU
