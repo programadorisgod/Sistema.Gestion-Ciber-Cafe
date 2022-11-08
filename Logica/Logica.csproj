@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Diagrama de clases Logica.cd" />
     <None Include="Logica.cd" />
     <None Include="packages.config" />
   </ItemGroup>
