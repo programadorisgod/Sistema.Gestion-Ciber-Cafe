@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Entidades;
 using Datos;
+using NPOI.SS.Formula.Functions;
 
 namespace Logica
 {
-    public class ServicioProducto
+    public class ServicioProducto : Iservices<Producto>
     {
         List<Producto> ListaProductos;
         RepositorioProducto repositorioProducto = new RepositorioProducto();
@@ -25,7 +26,7 @@ namespace Logica
             string Guardado = string.Empty;
             try
             {
-                if (GetByCode(producto, -1) == null)
+                if (GetById(producto, -1) == null)
                 {
                     Guardado = repositorioProducto.Guardar(producto);
                     return Guardado;
@@ -59,7 +60,7 @@ namespace Logica
         }
         public string Edit(Producto productonuevo, int row)
         {
-            Producto productoviejo = GetByCode(productonuevo, row);
+            Producto productoviejo = GetById(productonuevo, row);
             try
             {
                 if (productoviejo == null)
@@ -78,7 +79,7 @@ namespace Logica
             }
 
         }
-        public Producto GetByCode(Producto producto, int row)
+        public Producto GetById(Producto producto, int row)
         {
             ListaProductos = GetAll();
 

@@ -8,7 +8,7 @@ using NPOI.SS.Formula.Functions;
 
 namespace Logica
 {
-    public class ServicioCliente : IserviceCliente<Cliente>
+    public class ServicioCliente : Iservices<Cliente>
     {
         
         List<Cliente> clienteList;
@@ -56,19 +56,6 @@ namespace Logica
                 return "Cliente no editado";
             }
             
-        }
-
-        public bool Exists(Cliente Cliente)
-        {
-            foreach (var item in clienteList)
-            {
-                if (item.Cedula.Equals(Cliente.Cedula))
-                {
-                    return true;
-                }
-
-            }
-            return false;
         }
 
         public List<Cliente> GetAll()
