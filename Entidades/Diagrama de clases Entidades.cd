@@ -21,13 +21,6 @@
       <FileName>DetalleEntrada.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.Detallesalida">
-    <Position X="7.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Detallesalida.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Entidades.DetalleSalida">
     <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
