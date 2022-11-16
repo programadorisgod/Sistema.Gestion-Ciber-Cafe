@@ -5,38 +5,18 @@ using System.Text;
 
 namespace Entidades
 {
-    public class EntradaProducto : Proveedor
+    public class EntradaProducto
     {
-        private String IdEntrada
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public String IdEntrada { get; set; }
 
-        private DateTime FechaRegistro
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public DateTime FechaRegistro { get; set; }
 
-        private int Cantidad
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string CedulaProveedor { get; set; }
 
-        private Double MontoTotal
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string CodigoProducto { get; set; }
+
+        public int Cantidad { get; set; }
+
+        public Double MontoTotal { get; set; }
     }
 }

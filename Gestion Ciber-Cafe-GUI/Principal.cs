@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -86,8 +87,8 @@ namespace Gestion_Ciber_Cafe_GUI
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //Codigo...
-            MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
+            Entrada detalle = new Entrada();
+            detalle.Show();
             OcultarSubmenu();
         }
 
@@ -98,7 +99,7 @@ namespace Gestion_Ciber_Cafe_GUI
             OcultarSubmenu();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnDetalleEntrada_Click(object sender, EventArgs e)
         {
             //Codigo...
             MessageBox.Show("Esta usando la version beta de este proyecto \n\nClick en 'Quienes somos?' para mas informacion");
