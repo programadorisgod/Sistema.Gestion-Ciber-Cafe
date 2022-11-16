@@ -44,6 +44,7 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.panelMenuLateral.SuspendLayout();
             this.panelInfo.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             this.panelMenuLateral.AutoScroll = true;
             this.panelMenuLateral.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panelMenuLateral.Controls.Add(this.btnVentas);
             this.panelMenuLateral.Controls.Add(this.panelInfo);
             this.panelMenuLateral.Controls.Add(this.btnInventario);
             this.panelMenuLateral.Controls.Add(this.btnProveedores);
@@ -276,6 +278,24 @@
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
             // 
+            // btnVentas
+            // 
+            this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnVentas.Location = new System.Drawing.Point(0, 325);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnVentas.Size = new System.Drawing.Size(250, 45);
+            this.btnVentas.TabIndex = 9;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +344,7 @@
         private System.Windows.Forms.LinkLabel linkLabelPrincipal;
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnProveedores;
+        private System.Windows.Forms.Button btnVentas;
     }
 }
 
