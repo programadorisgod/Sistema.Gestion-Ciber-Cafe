@@ -34,7 +34,7 @@
             this.tabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPageProductos = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.labelBuscar = new System.Windows.Forms.Label();
             this.grillaListaProductos = new System.Windows.Forms.DataGridView();
@@ -61,10 +61,10 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPrincipal.SuspendLayout();
             this.tabPageProductos.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaListaProductos)).BeginInit();
             this.panelLateralDetalleProducto.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
@@ -112,7 +112,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.textBoxBuscar);
             this.panel1.Controls.Add(this.labelBuscar);
             this.panel1.Controls.Add(this.grillaListaProductos);
@@ -123,27 +124,24 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox6
+            // btnBuscar
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources._64673;
-            this.pictureBox6.Location = new System.Drawing.Point(679, 24);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(22, 20);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
-            this.pictureBox6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseMove);
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources._64673__1___1___1___1_;
+            this.btnBuscar.Location = new System.Drawing.Point(673, 24);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(28, 20);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // textBoxBuscar
             // 
             this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxBuscar.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxBuscar.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxBuscar.Location = new System.Drawing.Point(484, 24);
+            this.textBoxBuscar.Location = new System.Drawing.Point(483, 24);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(190, 20);
             this.textBoxBuscar.TabIndex = 4;
@@ -153,7 +151,7 @@
             this.labelBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelBuscar.AutoSize = true;
             this.labelBuscar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBuscar.Location = new System.Drawing.Point(426, 25);
+            this.labelBuscar.Location = new System.Drawing.Point(324, 25);
             this.labelBuscar.Name = "labelBuscar";
             this.labelBuscar.Size = new System.Drawing.Size(52, 16);
             this.labelBuscar.TabIndex = 3;
@@ -204,7 +202,7 @@
             this.labelListaProductos.AutoSize = true;
             this.labelListaProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelListaProductos.ForeColor = System.Drawing.Color.Indigo;
-            this.labelListaProductos.Location = new System.Drawing.Point(7, 23);
+            this.labelListaProductos.Location = new System.Drawing.Point(7, 21);
             this.labelListaProductos.Name = "labelListaProductos";
             this.labelListaProductos.Size = new System.Drawing.Size(182, 24);
             this.labelListaProductos.TabIndex = 1;
@@ -411,7 +409,7 @@
             this.labelDetalleProducto.AutoSize = true;
             this.labelDetalleProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDetalleProducto.ForeColor = System.Drawing.Color.Indigo;
-            this.labelDetalleProducto.Location = new System.Drawing.Point(13, 23);
+            this.labelDetalleProducto.Location = new System.Drawing.Point(13, 21);
             this.labelDetalleProducto.Name = "labelDetalleProducto";
             this.labelDetalleProducto.Size = new System.Drawing.Size(194, 24);
             this.labelDetalleProducto.TabIndex = 0;
@@ -488,6 +486,16 @@
             this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
             this.pictureBox5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseMove);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(382, 23);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(95, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,7 +517,6 @@
             this.tabPageProductos.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaListaProductos)).EndInit();
             this.panelLateralDetalleProducto.ResumeLayout(false);
             this.panelLateralDetalleProducto.PerformLayout();
@@ -552,9 +559,10 @@
         private System.Windows.Forms.Label labelBuscar;
         private System.Windows.Forms.DataGridView grillaListaProductos;
         private System.Windows.Forms.Label labelListaProductos;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.CheckBox mostraretiqueta;
         private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

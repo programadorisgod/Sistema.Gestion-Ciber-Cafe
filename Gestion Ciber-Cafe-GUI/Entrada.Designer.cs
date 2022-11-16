@@ -28,35 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelError = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.textBoxPrecioCompra = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxCodigoProveedor = new System.Windows.Forms.ComboBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.labelEntrada = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIdEntrada = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.comboBoxCedulaProveedor = new System.Windows.Forms.ComboBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.comboBoxCedulaProveedor = new System.Windows.Forms.ComboBox();
-            this.comboBoxCodigoProveedor = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelRegistroEntradas = new System.Windows.Forms.Label();
+            this.grillaListaProductos = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.textBoxBuscar = new System.Windows.Forms.TextBox();
+            this.labelBuscar = new System.Windows.Forms.Label();
+            this.comboBoxBuscar = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaListaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.labelError);
+            this.panel1.Controls.Add(this.pictureBox11);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBox12);
+            this.panel1.Controls.Add(this.textBoxPrecioCompra);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.comboBoxCodigoProveedor);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.labelEntrada);
@@ -64,55 +85,140 @@
             this.panel1.Controls.Add(this.txtDireccion);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtIdEntrada);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Controls.Add(this.pictureBox12);
-            this.panel1.Controls.Add(this.pictureBox11);
             this.panel1.Controls.Add(this.comboBoxCedulaProveedor);
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(399, 407);
+            this.panel1.Size = new System.Drawing.Size(264, 460);
             this.panel1.TabIndex = 43;
+            // 
+            // labelError
+            // 
+            this.labelError.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelError.AutoSize = true;
+            this.labelError.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.labelError.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.importante__1_;
+            this.labelError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelError.Location = new System.Drawing.Point(-235, 325);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(72, 13);
+            this.labelError.TabIndex = 136;
+            this.labelError.Text = "ErrorMessage";
+            this.labelError.Visible = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
+            this.pictureBox11.Location = new System.Drawing.Point(16, 201);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(231, 4);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 55;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 249);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(231, 4);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 64;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
+            this.pictureBox12.Location = new System.Drawing.Point(17, 297);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(231, 4);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 56;
+            this.pictureBox12.TabStop = false;
+            // 
+            // textBoxPrecioCompra
+            // 
+            this.textBoxPrecioCompra.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxPrecioCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxPrecioCompra.Location = new System.Drawing.Point(18, 230);
+            this.textBoxPrecioCompra.Name = "textBoxPrecioCompra";
+            this.textBoxPrecioCompra.Size = new System.Drawing.Size(229, 20);
+            this.textBoxPrecioCompra.TabIndex = 63;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 208);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 19);
+            this.label5.TabIndex = 62;
+            this.label5.Text = "Precio Compra";
+            // 
+            // comboBoxCodigoProveedor
+            // 
+            this.comboBoxCodigoProveedor.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxCodigoProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCodigoProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxCodigoProveedor.FormattingEnabled = true;
+            this.comboBoxCodigoProveedor.Location = new System.Drawing.Point(17, 181);
+            this.comboBoxCodigoProveedor.Name = "comboBoxCodigoProveedor";
+            this.comboBoxCodigoProveedor.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxCodigoProveedor.TabIndex = 61;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.ic_save_128_28731__1___2_;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(17, 341);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnGuardar.Size = new System.Drawing.Size(230, 42);
+            this.btnGuardar.TabIndex = 59;
+            this.btnGuardar.Text = "             Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // labelEntrada
             // 
-            this.labelEntrada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelEntrada.AutoSize = true;
             this.labelEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEntrada.ForeColor = System.Drawing.Color.Indigo;
-            this.labelEntrada.Location = new System.Drawing.Point(67, 47);
+            this.labelEntrada.Location = new System.Drawing.Point(12, 69);
             this.labelEntrada.Name = "labelEntrada";
-            this.labelEntrada.Size = new System.Drawing.Size(82, 24);
+            this.labelEntrada.Size = new System.Drawing.Size(182, 24);
             this.labelEntrada.TabIndex = 58;
-            this.labelEntrada.Text = "Entrada";
+            this.labelEntrada.Text = "Detalle de Entrada";
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox10.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
-            this.pictureBox10.Location = new System.Drawing.Point(70, 173);
+            this.pictureBox10.Location = new System.Drawing.Point(16, 152);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(262, 4);
+            this.pictureBox10.Size = new System.Drawing.Size(231, 4);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 54;
             this.pictureBox10.TabStop = false;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDireccion.Location = new System.Drawing.Point(71, 252);
+            this.txtDireccion.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDireccion.Location = new System.Drawing.Point(18, 278);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(260, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(229, 20);
             this.txtDireccion.TabIndex = 50;
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(67, 231);
+            this.label4.Location = new System.Drawing.Point(12, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 19);
             this.label4.TabIndex = 49;
@@ -120,77 +226,34 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 181);
+            this.label3.Location = new System.Drawing.Point(13, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 19);
+            this.label3.Size = new System.Drawing.Size(66, 19);
             this.label3.TabIndex = 47;
-            this.label3.Text = "Codigo del Producto";
-            // 
-            // txtIdEntrada
-            // 
-            this.txtIdEntrada.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtIdEntrada.Location = new System.Drawing.Point(71, 108);
-            this.txtIdEntrada.Name = "txtIdEntrada";
-            this.txtIdEntrada.Size = new System.Drawing.Size(260, 20);
-            this.txtIdEntrada.TabIndex = 46;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 19);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "ID Entrada";
+            this.label3.Text = "Producto";
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 132);
+            this.label1.Location = new System.Drawing.Point(13, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 19);
+            this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 43;
-            this.label1.Text = "Cedula del Proveedor";
+            this.label1.Text = "Proveedor";
             // 
-            // pictureBox9
+            // comboBoxCedulaProveedor
             // 
-            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox9.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
-            this.pictureBox9.Location = new System.Drawing.Point(70, 127);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(262, 4);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 53;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox12.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
-            this.pictureBox12.Location = new System.Drawing.Point(70, 271);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(262, 4);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 56;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox11.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.linea;
-            this.pictureBox11.Location = new System.Drawing.Point(70, 223);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(262, 4);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 55;
-            this.pictureBox11.TabStop = false;
+            this.comboBoxCedulaProveedor.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxCedulaProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCedulaProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxCedulaProveedor.FormattingEnabled = true;
+            this.comboBoxCedulaProveedor.Location = new System.Drawing.Point(17, 132);
+            this.comboBoxCedulaProveedor.Name = "comboBoxCedulaProveedor";
+            this.comboBoxCedulaProveedor.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxCedulaProveedor.TabIndex = 60;
             // 
             // pictureBox5
             // 
@@ -198,7 +261,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox5.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.equis_salir;
-            this.pictureBox5.Location = new System.Drawing.Point(366, 3);
+            this.pictureBox5.Location = new System.Drawing.Point(917, 8);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(29, 23);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +277,7 @@
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox6.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.minimizar1;
-            this.pictureBox6.Location = new System.Drawing.Point(338, 3);
+            this.pictureBox6.Location = new System.Drawing.Point(889, 8);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(28, 23);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -224,47 +287,124 @@
             this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
             this.pictureBox6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseMove);
             // 
-            // btnGuardar
+            // panel2
             // 
-            this.btnGuardar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources.ic_save_128_28731__1___2_;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(73, 304);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnGuardar.Size = new System.Drawing.Size(260, 42);
-            this.btnGuardar.TabIndex = 59;
-            this.btnGuardar.Text = "             Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel2.Controls.Add(this.comboBoxBuscar);
+            this.panel2.Controls.Add(this.btnBuscar);
+            this.panel2.Controls.Add(this.textBoxBuscar);
+            this.panel2.Controls.Add(this.labelBuscar);
+            this.panel2.Controls.Add(this.labelRegistroEntradas);
+            this.panel2.Controls.Add(this.grillaListaProductos);
+            this.panel2.Location = new System.Drawing.Point(264, 41);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(688, 460);
+            this.panel2.TabIndex = 46;
             // 
-            // comboBoxCedulaProveedor
+            // labelRegistroEntradas
             // 
-            this.comboBoxCedulaProveedor.FormattingEnabled = true;
-            this.comboBoxCedulaProveedor.Location = new System.Drawing.Point(71, 154);
-            this.comboBoxCedulaProveedor.Name = "comboBoxCedulaProveedor";
-            this.comboBoxCedulaProveedor.Size = new System.Drawing.Size(260, 21);
-            this.comboBoxCedulaProveedor.TabIndex = 60;
+            this.labelRegistroEntradas.AutoSize = true;
+            this.labelRegistroEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegistroEntradas.ForeColor = System.Drawing.Color.Indigo;
+            this.labelRegistroEntradas.Location = new System.Drawing.Point(9, 32);
+            this.labelRegistroEntradas.Name = "labelRegistroEntradas";
+            this.labelRegistroEntradas.Size = new System.Drawing.Size(205, 24);
+            this.labelRegistroEntradas.TabIndex = 67;
+            this.labelRegistroEntradas.Text = "Registro de Entradas";
             // 
-            // comboBoxCodigoProveedor
+            // grillaListaProductos
             // 
-            this.comboBoxCodigoProveedor.FormattingEnabled = true;
-            this.comboBoxCodigoProveedor.Location = new System.Drawing.Point(71, 203);
-            this.comboBoxCodigoProveedor.Name = "comboBoxCodigoProveedor";
-            this.comboBoxCodigoProveedor.Size = new System.Drawing.Size(260, 21);
-            this.comboBoxCodigoProveedor.TabIndex = 61;
+            this.grillaListaProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grillaListaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grillaListaProductos.BackgroundColor = System.Drawing.Color.Azure;
+            this.grillaListaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grillaListaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.grillaListaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaListaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grillaListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaListaProductos.Location = new System.Drawing.Point(13, 63);
+            this.grillaListaProductos.MultiSelect = false;
+            this.grillaListaProductos.Name = "grillaListaProductos";
+            this.grillaListaProductos.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaListaProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grillaListaProductos.RowHeadersVisible = false;
+            this.grillaListaProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.grillaListaProductos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.grillaListaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grillaListaProductos.Size = new System.Drawing.Size(662, 384);
+            this.grillaListaProductos.TabIndex = 66;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::Gestion_Ciber_Cafe_GUI.Properties.Resources._64673__1___1___1___1_;
+            this.btnBuscar.Location = new System.Drawing.Point(647, 35);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(28, 20);
+            this.btnBuscar.TabIndex = 70;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // textBoxBuscar
+            // 
+            this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxBuscar.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBuscar.Location = new System.Drawing.Point(457, 35);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(190, 20);
+            this.textBoxBuscar.TabIndex = 69;
+            // 
+            // labelBuscar
+            // 
+            this.labelBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelBuscar.AutoSize = true;
+            this.labelBuscar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBuscar.Location = new System.Drawing.Point(294, 36);
+            this.labelBuscar.Name = "labelBuscar";
+            this.labelBuscar.Size = new System.Drawing.Size(52, 16);
+            this.labelBuscar.TabIndex = 68;
+            this.labelBuscar.Text = "Buscar:";
+            // 
+            // comboBoxBuscar
+            // 
+            this.comboBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxBuscar.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxBuscar.FormattingEnabled = true;
+            this.comboBoxBuscar.Location = new System.Drawing.Point(352, 34);
+            this.comboBoxBuscar.Name = "comboBoxBuscar";
+            this.comboBoxBuscar.Size = new System.Drawing.Size(99, 21);
+            this.comboBoxBuscar.TabIndex = 71;
             // 
             // Entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(399, 435);
+            this.ClientSize = new System.Drawing.Size(951, 500);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.panel1);
@@ -275,12 +415,15 @@
             this.Text = "Entrada";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaListaProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,10 +436,7 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIdEntrada;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -304,5 +444,16 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ComboBox comboBoxCodigoProveedor;
         private System.Windows.Forms.ComboBox comboBoxCedulaProveedor;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBoxPrecioCompra;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView grillaListaProductos;
+        private System.Windows.Forms.Label labelRegistroEntradas;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox textBoxBuscar;
+        private System.Windows.Forms.Label labelBuscar;
+        private System.Windows.Forms.ComboBox comboBoxBuscar;
     }
 }

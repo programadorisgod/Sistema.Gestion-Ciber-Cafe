@@ -17,6 +17,8 @@ namespace Entidades
 
         public int Cantidad { get; set; }
 
+        public Double PrecioCompra { get; set; }
+
         public Double MontoTotal { get; set; }
     }
 }

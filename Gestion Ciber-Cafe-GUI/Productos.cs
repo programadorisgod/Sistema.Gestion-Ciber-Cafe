@@ -140,18 +140,6 @@ namespace Gestion_Ciber_Cafe_GUI
 
         }
 
-        private void pictureBox6_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void pictureBox6_MouseMove(object sender, MouseEventArgs e)
-        {
-            pictureBox6.BackColor = Color.PowderBlue;
-            pictureBox6.BorderStyle = BorderStyle.FixedSingle;
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Guardar();
